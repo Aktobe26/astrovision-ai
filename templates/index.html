@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AstroVision AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>AstroVision AI</h1>
+    <p>ИИ-улучшение телескопических изображений (RTX 3060 GPU)</p>
+
+    <h2>Загрузить изображение</h2>
+
+    <form id="upload-form" action="/upload/" enctype="multipart/form-data" method="post">
+        <input type="file" name="file" id="fileInput" required>
+        <br>
+        <button type="submit">Улучшить изображение</button>
+    </form>
+
+    <hr style="margin:40px 0; opacity:0.2;">
+
+    <h2>Или сделать фото</h2>
+
+    <button onclick="startCamera()">📸 Открыть камеру</button>
+
+    <div id="camera-container" style="margin-top:20px; display:none;">
+        <video id="video" width="400" autoplay></video>
+        <br><br>
+        <button onclick="capturePhoto()">Сфотографировать и улучшить</button>
+    </div>
+
+    <canvas id="canvas" style="display:none;"></canvas>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
